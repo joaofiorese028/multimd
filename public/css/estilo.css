@@ -1,0 +1,702 @@
+/* ========================= */
+/* ÁREA DE CADASTRO */
+/* ========================= */
+
+.cadastro-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #eee;
+}
+
+.cadastro-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #a52a2a;
+}
+
+.cadastro-box {
+    background: #c94a2f;
+    width: 600px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 12px;
+    color: #fff;
+    text-align: left;
+}
+
+.cadastro-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cadastro-btn {
+    width: 100%;
+    padding: 14px;
+    background: #e1c233;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #333;
+}
+
+.cadastro-btn:hover {
+    background: #a63a24;
+    color: #fff;
+}
+
+/* Responsivo Cadastro */
+@media (max-width: 768px) {
+    .cadastro-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .cadastro-section h1 {
+        font-size: 34px;
+    }
+}
+
+/* ========================= */
+/* ESTILOS GERAIS */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eee;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* ========================= */
+/* CABEÇALHO E NAVEGAÇÃO */
+/* ========================= */
+
+.top-header {
+    background: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: relative;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #a52a2a;
+}
+
+.center-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
+    font-weight: bold;
+    background: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+/* ========================= */
+/* PÁGINA INICIAL / BANNERS */
+/* ========================= */
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background: #9b1c12;
+}
+
+.highlight {
+    background: #e1c233;
+    padding: 40px 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content h2 {
+    font-size: 32px;
+}
+
+.content h1 {
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.content h1 span {
+    font-size: 140px;
+    font-weight: bold;
+}
+
+/* ========================= */
+/* SEÇÃO CONTATO */
+/* ========================= */
+
+.contato-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contato-section h1 {
+    font-size: 60px;
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+
+.info p {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/* GUIA MÉDICO */
+/* ========================= */
+
+.guia-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.guia-section h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.guia-box {
+    background: #c94a2f;
+    width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.guia-box h2 {
+    margin-bottom: 20px;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.line {
+    height: 2px;
+    background: #7a2a1c;
+    margin-bottom: 20px;
+}
+
+.form-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.left {
+    width: 50%;
+}
+
+.left input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.hint {
+    font-size: 11px;
+    display: block;
+    margin-top: 5px;
+}
+
+.right {
+    width: 45%;
+    text-align: left;
+    font-size: 13px;
+}
+
+.right p {
+    margin-bottom: 8px;
+}
+
+.search-btn {
+    width: 70%;
+    padding: 12px;
+    background: #a8331f;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ========================= */
+/* TELA DE LOGIN */
+/* ========================= */
+
+.login-section {
+    background: #eee;
+    padding: 50px 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.login-box {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-box h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.login-box p {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.access-btn {
+    margin-top: 15px;
+    background: #c94a2f;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.links a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.divider {
+    width: 2px;
+    background: #bbb;
+    height: 350px;
+}
+
+/* ========================= */
+/* FORMULÁRIO DOS PLANOS */
+/* ========================= */
+
+.form-fisica {
+    width: 700px;
+    margin: 50px auto;
+    background: #a63a24;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.form-fisica h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.linha {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.linha input,
+.linha select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.linha input:focus,
+.linha select:focus {
+    border-color: #c94a2f;
+    box-shadow: 0 0 5px rgba(201, 74, 47, 0.4);
+}
+
+.form-fisica button {
+    width: 100%;
+    padding: 16px;
+    background: #e1c233;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-fisica button:hover {
+    background: #a63a24;
+}
+
+/* Responsivo Formulário de Planos */
+@media (max-width: 768px) {
+    .form-fisica {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
+}
+
+/* ========================= */
+/* ESQUECI MINHA SENHA */
+/* ========================= */
+
+.senha-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: #eee;
+    text-align: center;
+}
+
+.senha-section h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.senha-box {
+    width: 600px;
+    margin: 40px auto;
+    background: #c94a2f;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.form-senha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+.campo input {
+    padding: 14px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.campo input:focus {
+    border-color: #e1c233;
+    box-shadow: 0 0 5px rgba(225, 194, 51, 0.6);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.enviar-btn,
+.cancelar-btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.enviar-btn {
+    background: #a52a2a;
+    color: #fff;
+}
+
+.enviar-btn:hover {
+    background: #110606;
+}
+
+.cancelar-btn {
+    background: #7a2a1c;
+    color: white;
+}
+
+.cancelar-btn:hover {
+    background: #110606;
+}
+
+.info-text {
+    margin-top: 30px;
+    font-size: 14px;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Responsivo Esqueci Minha Senha */
+@media (max-width: 768px) {
+    .senha-box {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .senha-section h1 {
+        font-size: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .enviar-btn,
+    .cancelar-btn {
+        width: 100%;
+    }
+}
+
+.mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff7cf;
+}
+
+.links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #a52a2a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.pagina-api {
+    padding: 50px 8%;
+    min-height: 70vh;
+}
+
+.pagina-api h1 {
+    color: #a52a2a;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card-produto, .compra-card, .diagnostico-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+.card-produto h3, .diagnostico-card h2 {
+    color: #a52a2a;
+    margin-bottom: 10px;
+}
+
+.emoji-produto {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.card-produto button,
+.pagina-api button,
+.form-fisica button {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #e1c233;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-produto button:hover,
+.pagina-api button:hover,
+.form-fisica button:hover {
+    background: #a63a24;
+    color: #fff;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.tabela th, .tabela td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabela th {
+    background: #a52a2a;
+    color: #fff;
+}
+
+.diagnostico {
+    display: grid;
+    gap: 18px;
+}
+
+.diagnostico code {
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.form-fisica {
+    max-width: 720px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+.form-fisica h3 {
+    color: #a52a2a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-fisica .linha {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.form-fisica input,
+.form-fisica select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .form-area, .form-fisica .linha {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .tabela {
+        font-size: 13px;
+    }
+}

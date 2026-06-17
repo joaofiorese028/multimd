@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiMed - Login</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="container header-top">
+            <div class="logo">MultiMed ▼</div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="multimed.html">Multimed</a></li>
+                <li><a href="contato.html">Fale com a Multimed</a></li>
+                <li><a href="guia.html">Guia Médico</a></li>
+                <li><a href="produtos.html">Produtos/API</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="container login-container">
+            <div class="divider"></div>
+
+            <div class="login-box">
+                <h2>Colaborador, cooperador ou Prestador</h2>
+                <p>Acessar área como Colaborador, Cooperado ou Prestador</p>
+
+                <input type="email" id="email" placeholder="E-mail" value="ana@email.com">
+                <input type="password" id="senha" placeholder="Senha" value="123456">
+                <input type="text" id="empresa" placeholder="Empresa" value="MultiMed">
+
+                <button class="access-btn" onclick="fazerLogin()">ACESSAR</button>
+
+                <p id="mensagemLogin" class="mensagem"></p>
+
+                <div class="links">
+                    <a href="senha.html">Esqueci a senha</a>
+                    <a href="cadastrar_cliente.html">Cadastrar Colaborador</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/api.js"></script>
+
+    <script>
+        async function fazerLogin() {
+            const mensagem = document.getElementById('mensagemLogin');
+
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value.trim();
+
+            if (!email || !senha) {
+                mensagem.textContent = 'Preencha e-mail e senha.';
+                return;
+            }
+
+            try {
+                const dados = await api('/auth/login', {
+                    method: 'POST',
+                    body: { email, senha }
+                });
+
+                salvarUsuario(dados.usuario);
+
+                mensagem.textContent = `Bem-vindo(a), ${dados.usuario.nome}!`;
+
+                setTimeout(function() {
+                    window.location.href = 'produtos.html';
+                }, 800);
+            } catch (erro) {
+                mensagem.textContent = erro.message;
+            }
+        }
+    </script>
+</body>
+</html>

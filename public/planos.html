@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos - MultiMed</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="container header-top"><div class="logo">MultiMed ▼</div></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="multimed.html">Início</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="guia.html">Guia Médico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-fisica">
+        <h3>Pessoa Física</h3>
+
+        <form id="formPlano">
+            <div class="linha">
+                <select id="estado" required>
+                    <option selected disabled value="">Estado</option>
+                    <option>Amazonas</option>
+                    <option>São Paulo</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Minas Gerais</option>
+                </select>
+
+                <select id="cidade" required>
+                    <option selected disabled value="">Cidade</option>
+                    <option>Anamã</option>
+                    <option>Manaus</option>
+                    <option>Campinas</option>
+                    <option>Belo Horizonte</option>
+                </select>
+            </div>
+
+            <div class="linha">
+                <select id="unimed" required>
+                    <option selected disabled value="">Unimed</option>
+                    <option>UNIMED NORTE/NORDESTE</option>
+                    <option>UNIMED SUL</option>
+                    <option>UNIMED BRASIL</option>
+                </select>
+            </div>
+
+            <div class="linha"><input id="cpf" type="text" placeholder="Digite seu CPF" required></div>
+            <div class="linha"><input id="nome" type="text" placeholder="Digite seu nome" required></div>
+            <div class="linha"><input id="email" type="email" placeholder="Digite seu e-mail" required></div>
+            <div class="linha"><input id="telefone" type="tel" placeholder="Telefone com DDD" required></div>
+
+            <div class="linha">
+                <select id="vidas" required>
+                    <option selected disabled value="">Número de vidas</option>
+                    <option>1 vida</option><option>2 vidas</option><option>3 vidas</option><option>4 vidas</option><option>5+ vidas</option>
+                </select>
+            </div>
+
+            <div class="linha">
+                <select id="faixaEtaria" required>
+                    <option selected disabled value="">Faixa etária</option>
+                    <option>0 a 18 anos</option><option>19 a 23 anos</option><option>24 a 28 anos</option><option>29 a 33 anos</option><option>34 a 38 anos</option><option>39+ anos</option>
+                </select>
+            </div>
+
+            <div class="linha">
+                <select id="possuiPlano" required>
+                    <option selected disabled value="">Já possui plano de saúde?</option>
+                    <option>Sim</option><option>Não</option>
+                </select>
+            </div>
+
+            <button type="submit">SOLICITAR PLANO IDEAL</button>
+            <p id="mensagemPlano" class="mensagem"></p>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('formPlano').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const solicitacao = {
+                estado: document.getElementById('estado').value,
+                cidade: document.getElementById('cidade').value,
+                unimed: document.getElementById('unimed').value,
+                cpf: document.getElementById('cpf').value,
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                telefone: document.getElementById('telefone').value,
+                vidas: document.getElementById('vidas').value,
+                faixaEtaria: document.getElementById('faixaEtaria').value,
+                possuiPlano: document.getElementById('possuiPlano').value
+            };
+
+            const lista = JSON.parse(localStorage.getItem('solicitacoesPlano') || '[]');
+            lista.push(solicitacao);
+            localStorage.setItem('solicitacoesPlano', JSON.stringify(lista));
+
+            document.getElementById('mensagemPlano').textContent = 'Solicitação salva no navegador para demonstração.';
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>

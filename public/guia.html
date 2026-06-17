@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Médico</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <section class="guia-section">
+        <h1>Guia Médico</h1>
+        <a href="multimed.html">Voltar</a>
+        <p class="subtitle">Informe aqui qual o tipo de atendimento você procura</p>
+
+        <div class="guia-box">
+            <h2>Busca rápida</h2>
+            <p class="label">Digite aqui o serviço que você procura</p>
+            <div class="line"></div>
+
+            <div class="form-area">
+                <div class="left">
+                    <input id="buscaGuia" type="text" placeholder="Ex.: cardiologia, pediatria, consulta">
+                    <span class="hint">Digite uma especialidade ou serviço.</span>
+                </div>
+
+                <div class="right">
+                    <p>Telessaúde</p>
+                    <p>Urgência e emergência</p>
+                    <p>Mudança da rede prestadora</p>
+                </div>
+            </div>
+
+            <button class="search-btn" onclick="pesquisarGuia()">Pesquisar</button>
+            <p id="resultadoGuia" class="mensagem"></p>
+        </div>
+    </section>
+
+    <script>
+        // Função chamada pelo botão Pesquisar.
+        function pesquisarGuia() {
+            // Pega o texto digitado no campo de busca.
+            const busca = document.getElementById('buscaGuia').value.trim();
+            const resultado = document.getElementById('resultadoGuia');
+
+            // Valida se o usuário digitou alguma coisa.
+            if (!busca) {
+                resultado.textContent = 'Digite uma especialidade ou serviço para pesquisar.';
+                return;
+            }
+
+            // Exemplo didático de retorno. Esta página ainda não consulta uma rota no back-end.
+            resultado.textContent = `Resultado: procurando atendimento para "${busca}".`;
+        }
+    </script>
+</body>
+</html>
