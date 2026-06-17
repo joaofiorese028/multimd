@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esqueci Minha Senha</title>
-
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
@@ -66,29 +65,24 @@
     </section>
 
     <script>
-
         document.getElementById("formSenha").addEventListener("submit", function(event) {
-
             event.preventDefault();
 
             let nome = document.getElementById("nome").value;
             let email = document.getElementById("email").value;
             let cpf = document.getElementById("cpf").value;
 
-            if(nome === "" || email === "" || cpf === ""){
+            if (nome === "" || email === "" || cpf === "") {
                 alert("Preencha todos os campos!");
                 return;
             }
 
             alert("Solicitação enviada com sucesso!");
-
-
         });
 
-        function voltarLogin(){
+        function voltarLogin() {
             window.location.href = "login.html";
         }
-
     </script>
 
 </body>
